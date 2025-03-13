@@ -1,6 +1,6 @@
-import React from 'react';
-import Background from '../Background';
-import { Container } from './HomeContainer.styles';
+import React from "react";
+import Background from "../Background";
+import { Container } from "./HomeContainer.styles";
 
 function HomeContainer() {
   return (
