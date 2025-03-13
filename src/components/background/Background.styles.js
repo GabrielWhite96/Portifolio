@@ -71,6 +71,30 @@ export const GradientSphere = styled.div`
     left: 20%;
     animation: ${float3} 20s ease-in-out infinite alternate;
   }
+
+  /* Ajuste para mobile: reduz o tamanho das esferas */
+  @media (max-width: 768px) {
+    &.sphere-1 {
+      width: 50vw;
+      height: 50vw;
+      top: -20%;
+      left: -20%;
+    }
+
+    &.sphere-2 {
+      width: 60vw;
+      height: 60vw;
+      bottom: -30%;
+      right: -20%;
+    }
+
+    &.sphere-3 {
+      width: 40vw;
+      height: 40vw;
+      top: 70%;
+      left: 10%;
+    }
+  }
 `;
 
 export const NoiseOverlay = styled.div`
@@ -116,6 +140,12 @@ export const Glow = styled.div`
   z-index: 2;
   animation: ${pulse} 8s infinite alternate;
   filter: blur(30px);
+
+  /* Ajuste para mobile: reduz o tamanho do glow */
+  @media (max-width: 768px) {
+    width: 50vw;
+    height: 30vh;
+  }
 `;
 
 export const ParticlesContainer = styled.div`
@@ -145,6 +175,12 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* Ajuste para mobile: reduz o padding e max-width */
+  @media (max-width: 768px) {
+    max-width: 90%;
+    padding: 1rem;
+  }
 `;
 
 export const ProfilePic = styled.img`
@@ -161,6 +197,12 @@ export const ProfilePic = styled.img`
     border-color: rgba(255, 58, 130, 0.5);
     box-shadow: 0 0 15px rgba(255, 58, 130, 0.3);
   }
+
+  /* Ajuste para mobile: reduz o tamanho da foto */
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -171,6 +213,12 @@ export const Title = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+
+  /* Ajuste para mobile: reduz o tamanho do título */
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Description = styled.p`
@@ -179,12 +227,24 @@ export const Description = styled.p`
   color: rgba(255, 255, 255, 1);
   margin-bottom: 2rem;
   font-weight: 500;
+
+  /* Ajuste para mobile: reduz o tamanho e melhora a legibilidade */
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const SocialIcons = styled.div`
   display: flex;
   gap: 2rem;
   margin-bottom: 2rem;
+
+  /* Ajuste para mobile: reduz o gap */
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const SocialLink = styled.a`
@@ -209,6 +269,13 @@ export const SocialLink = styled.a`
     background: linear-gradient(90deg, #ff3a82, #5233ff);
     box-shadow: 0 0 15px rgba(255, 58, 130, 0.5);
   }
+
+  /* Ajuste para mobile: reduz o tamanho dos ícones */
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    width: 35px;
+    height: 35px;
+  }
 `;
 
 export const Button = styled.button`
@@ -229,6 +296,12 @@ export const Button = styled.button`
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(255, 58, 130, 0.4);
   }
+
+  /* Ajuste para mobile: reduz o padding e fonte */
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.6rem 2rem;
+  }
 `;
 
 const bounce = keyframes`
@@ -239,7 +312,7 @@ const bounce = keyframes`
 
 export const ScrollArrow = styled.div`
   position: absolute;
-  bottom: 20px; /* Ajustado para ficar próximo ao fim da tela */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.5rem;
@@ -250,6 +323,12 @@ export const ScrollArrow = styled.div`
 
   &:hover {
     color: #ff3a82;
-    transform: translateX(-50%) translateY(-5px); /* Ajustado para manter centralização no hover */
+    transform: translateX(-50%) translateY(-5px);
+  }
+
+  /* Ajuste para mobile: mantém a posição e tamanho */
+  @media (max-width: 768px) {
+    bottom: 15px; /* Um pouco mais perto da borda em mobile */
+    font-size: 1.2rem;
   }
 `;
